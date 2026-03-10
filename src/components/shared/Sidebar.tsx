@@ -16,7 +16,7 @@ function Sidebar() {
           onClick={onMenuToggle}>
           <GraduationCap />
         </button>
-        <h1 className='text-xl font-semibold text-gray-900'>YOOEDU!!!</h1>
+        <h1 className='text-xl font-semibold text-gray-900'>YOEDU!!!</h1>
       </div>
       <nav className='p-4'>
         <ul className='space-y-2'>

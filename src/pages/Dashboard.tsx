@@ -4,9 +4,14 @@ export function Dashboard() {
   return (
     <div className="p-8 w-full">
       
-      <div className="mb-6">
-        <h2 className='text-2xl text-gray-900'>Student Management</h2>
-        <p className='mt-1 text-gray-600'>Students List Table</p>
+      <div className="mb-6 flex justify-between items-center">
+        <div>
+           <h2 className='text-4xl text-gray-900 font-semibold'>Student Management</h2>
+          <p className='mt-1 text-gray-600'>Students List Table</p>
+        </div>
+        <button className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md transition-colors ">
+        + Add Student
+        </button>
       </div>
       
       <div className="bg-white overflow-hidden">
@@ -26,7 +31,14 @@ export function Dashboard() {
             {studentsData.slice(0, 100).map((student) => (
               <tr key={student.id} className="hover:bg-gray-50 ">
                 <td className="p-4 text-gray-600">{student.id}</td>
-                <td className="p-4 font-medium text-gray-900">{student.first_name} {student.last_name}</td>
+                <td className="p-4">
+                    <div className="font-semibold text-gray-900 text-2xl">
+                        {student.first_name} {student.last_name}
+                    </div>
+                    <div className="font-normal text-sm text-gray-500 mt-1">
+                        {student.email}
+                    </div>
+                </td>
                 <td className="p-4 text-gray-600">{student.enrollment_date}</td>
                 <td className="p-4 text-gray-600">{student.gender}</td>
                 <td className="p-4">
